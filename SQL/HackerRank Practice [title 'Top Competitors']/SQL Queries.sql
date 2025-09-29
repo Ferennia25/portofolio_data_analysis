@@ -73,6 +73,7 @@ INSERT INTO hackers VALUES
 (86870, 'Todd'),
 (90411, 'Joe');
 
+-- the answer:
 SELECT 
     hacker_id, name
 FROM
