@@ -1,4 +1,5 @@
 -- the query in cte version
+
 with after_products_page as
 (select 
 	p1.website_pageview_id,
