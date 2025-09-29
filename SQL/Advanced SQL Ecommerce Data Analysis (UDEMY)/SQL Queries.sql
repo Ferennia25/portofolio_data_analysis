@@ -1,7 +1,3 @@
-SELECT * FROM website_sessions;
-SELECT * FROM website_pageviews;
-SELECT DISTINCT pageview_url FROM website_pageviews;
-
 -- the query in cte version
 with after_products_page as
 (select 
