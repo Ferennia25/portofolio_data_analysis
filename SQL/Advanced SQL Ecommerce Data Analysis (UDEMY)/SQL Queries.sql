@@ -1,3 +1,4 @@
+-- Task 1: Final Project number 6
 -- the query in cte version
 
 with after_products_page as
