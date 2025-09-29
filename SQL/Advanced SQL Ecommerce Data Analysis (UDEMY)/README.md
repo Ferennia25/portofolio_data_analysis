@@ -54,3 +54,98 @@ The result must be like this,
 
 
 The result shows that the clickthrough rate of the /products page is getting better, as is the rate of /products ‘ page visitors who make an order. This insight is very useful for any stakeholders or business analysts to know that the company has been doing better over time. We can decide what steps to take next to sustain it or even make better upselling in the future.
+
+### Task 2: Middle Project number 6
+
+_For the gsearch lander test, please estimate the revenue that test earned us (Hint: look at the increase in CVR from the test (Jun 19-Jul 28), and use nonbrand sessions and revenue since then to calculate incremental value) and also limit the time observation till 27 Nov 2012._
+
+Before we jump into Step 1, I’d like to share with you the type of first page that customers visited before November 27, 2012, which were/home and /lander-1 pages. This task’s purpose is to find the best landing page that has a better conversion rate to orders, which we’re going to test between June 19 and July 28, 2012. After we find out the best lander, we need to calculate the escalation rate after changing the lander page to be the best lander.
+
+**Step 1**. Know the first website_pageview_id that indicates ‘/lander-1’
+
+![Image](https://github.com/user-attachments/assets/6677df1a-350d-47de-ad01-7832baf45d30)
+
+The result:
+
+![Image](https://github.com/user-attachments/assets/5f0372c3-33b3-4155-aff7-c443edae3d34)
+
+**Step 2.** In this step we’re going to find the lander page of every session that happened before July 28 (the end of the lander test) and after the minimum of website_pageview_id that indicates /lander-1 which is the first /lander-1 ever. We also limit the type of utm_source and utm_campaign because we’re asked to observe those types of marketing channels that are used.
+
+![Image](https://github.com/user-attachments/assets/cee447a0-bec6-43d6-a8cf-eafecb934477)
+
+We can also see the result of the query above with,
+
+select * from first_lander_per_sess;
+
+The result must be like this,
+
+![Image](https://github.com/user-attachments/assets/a0598f17-410a-49f9-b992-05f0f4e4a110)
+
+**Step 3.** The third step, we’re going to find the type of lander pages that happened to every website_session_id from the first_lander_per_sess table.
+
+![Image](https://github.com/user-attachments/assets/63388cbf-befa-43ab-a353-0c766257977e)
+
+We can also see the result of the query above with,
+
+select * from nonbrand_test_session_w_landing_pages;
+
+The result must be like this,
+
+![Image](https://github.com/user-attachments/assets/58a5a9f1-f4c1-4587-a813-4856dd149d7f)
+
+**Step 4.** We also want to know the website_session_id that made it to orders, so we make this temporary table with a basic left join.
+
+![Image](https://github.com/user-attachments/assets/dd024c80-5920-49f8-b921-b417628598fc)
+
+We can also see the result of the query above with,
+
+select * from nonbrand_test_session_w_orders;
+
+The result must be like this,
+
+![Image](https://github.com/user-attachments/assets/276a8a3b-af4b-457b-b0ea-e09b0458d1c1)
+
+**Step 5.** Here we are, we finally can see the difference between /home and /lander-1 make it to orders, and how the conversion rates are.
+
+![Image](https://github.com/user-attachments/assets/f9335d5b-3057-4dba-98a8-3643a8743d7e)
+
+We can also see the result of the query above with,
+
+select * from comparison_home_lander1;
+
+The result must be like this,
+
+<!-- Failed to upload "1_R9yG-S0YOSPPqnWxf0Z08A.webp" -->
+
+With these queries, we know that 17145 is the last website_session_id when the lander page is /home (after the company made a test between /home and /lander-1 and found out /lander-1 was the best lander page), and the last /home lander page used is in July 29, 2012 (kindly remind that we limit the created_at to 2012–11–27 because we observed that range period).
+
+![Image](https://github.com/user-attachments/assets/c78f80f0-d683-4b8c-97ff-ec67f8e416db)
+
+The result:
+
+![Image](https://github.com/user-attachments/assets/b1940beb-0e80-4f06-a83e-2c0dca4c770f)
+![Image](https://github.com/user-attachments/assets/ed1060ad-711e-4b05-8c2b-379abbd2a054)
+
+After that, the amount of sessions that happen can be counted.
+
+![Image](https://github.com/user-attachments/assets/4193d7df-c906-4c05-9c78-379cc3453c16)
+
+The result:
+
+![Image](https://github.com/user-attachments/assets/f73152af-edb9-4425-826d-aabface6aeed)
+
+There were 22972 sessions after the company made all the customers’ lander page is /lander-1. We got the conversion rate from /home and /lander-1 page before, there are 0.0406 and 0.0318.
+
+If we see the difference between the conversion rate,
+
+![Image](https://github.com/user-attachments/assets/27803a87-a317-4522-94ad-65060476981f)
+![Image](https://github.com/user-attachments/assets/951dd9e2-c909-47f6-841d-58f8ccef3d1d)
+
+That would be 0.0088 of escalations of the lander page, which will make it to orders if we change the lander page from /home to fully /lander-1. That means if we multiply 22972 and 0.0088,
+
+![Image](https://github.com/user-attachments/assets/65bba45f-0d99-46fd-8de8-9894598b24a4)
+![Image](https://github.com/user-attachments/assets/c811fdbf-98e8-455d-900a-d06fd22e3475)
+
+there was an increase of 202 orders from usual (the company used only /home as the landing page before the test). So, the company got 202 more orders after using only /lander-1 as a lander page.
+
+
