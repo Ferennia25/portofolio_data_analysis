@@ -4,7 +4,7 @@
 
 I want to share some example cases we must solve as data analysts. Sometimes, our stakeholders need data to identify what’s happening with the business trends, level up the business, make it sustainable, and increase upselling. As data analysts, it’s our job to help them analyse all the data so that we have insight and the right answer that can actually help them.
 
-**DISCLAIMER**: All the database and task project questions are from Advanced SQL: MySQL for Ecommerce Data Analysis by John Pauler. He tutors the course in Udemy. I share my answer for some questions or tasks in the mid-project and final-project that John asked in the course. I also picked some unique and challenging tasks that I think are very useful to help us get advanced skills in query. Hope this inspires you to help you learn and understand more about SQL. Enjoy!🙂
+**DISCLAIMER**: All the database and task project questions are from *Advanced SQL: MySQL for Ecommerce Data Analysis* by John Pauler. He tutors the course in Udemy. I share my answer for some questions or tasks in the mid-project and final-project that John asked in the course. I also picked some unique and challenging tasks that I think are very useful to help us get advanced skills in query. Hope this inspires you to help you learn and understand more about SQL. Enjoy!🙂
 
 This is the Entity Relationship Model of the **MavenFuzzyFactory** database, so basically, these are the common ecommerce data tables that are usually used. We can see which one is the primary key or the foreign key in every table of data. For instance, in website_sessions, we have website_session_id as primary key, but website_session_id is a foreign key in website_pageviews table.
 
