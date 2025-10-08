@@ -115,7 +115,7 @@ select * from comparison_home_lander1;
 
 The result must be like this,
 
-<!-- Failed to upload "1_R9yG-S0YOSPPqnWxf0Z08A.webp" -->
+![Image](https://github.com/user-attachments/assets/3d52e4d3-a265-4429-9209-25a19bbb7890)
 
 With these queries, we know that 17145 is the last website_session_id when the lander page is /home (after the company made a test between /home and /lander-1 and found out /lander-1 was the best lander page), and the last /home lander page used is in July 29, 2012 (kindly remind that we limit the created_at to 2012–11–27 because we observed that range period).
 
