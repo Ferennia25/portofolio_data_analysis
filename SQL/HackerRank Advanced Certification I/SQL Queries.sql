@@ -30,7 +30,8 @@ select
     round(total_amount_per_sender,6) transactions_sum
 from suspicious_transactions_w_row_numbers
 where round(total_amount_per_sender,6) >= 150
-group by 1,5 having transactions_count >= 2;
+group by 1,5 having transactions_count >= 2
+order by 1,2,3 asc;
 
 
 -- the query in temporary table version
@@ -65,6 +66,7 @@ select
     round(total_amount_per_sender,6) transactions_sum
 from suspicious_transactions_w_row_numbers
 where round(total_amount_per_sender,6) >= 150
-group by 1,5 having transactions_count >= 2;
+group by 1,5 having transactions_count >= 2
+order by 1,2,3 asc;
 
 
