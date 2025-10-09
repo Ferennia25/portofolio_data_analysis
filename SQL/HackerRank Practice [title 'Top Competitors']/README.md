@@ -29,6 +29,7 @@ Submissions: The submission_id is the id of the submission, hacker_id is the id 
 ![Image](https://github.com/user-attachments/assets/546ceebd-2e0b-488a-8951-af5ce92be849)
 
 **-- my answer**
+
 I usually make points on whatever steps and output I have to make every time I practice on HackerRank. In this case, we only need hacker_id and name columns, but actually, we can get those columns only from the table that has been joined from all the tables that are given. We get Hackers, Difficulty, Challenges, and Submissions table. If we look closely, every table has its own primary and foreign keys, which can connect to the other table. In my solution, I connect the Submissions table to the Challenges table on challenge_id cause both tables have the column. I also connect the Submissions table to the Hackers table on hacker_id. Last, I connect the Challenges table, which has been joined to the Submissions table, to the Difficulty table on difficulty_level.
 
 Now, imagine the result of all the joined tables. We have a table that contains submission_id, hacker_id, challenge_id, score (from the Submissions table, which is the score of hackers who got in every submission), difficulty_level, score as score_max (from the Difficulty table, which is the maximum score that can be achieved for a challenge at that difficulty level), and name column.
