@@ -5,6 +5,7 @@
 **I want to share my ideas on how I solved one of the HackerRank SQL Practices. This problem is quite interesting because we have to use the join and subquery method simultaneously. I hope my thoughts and solutions can help you learn more about SQL!** ❤
 
 **-- the task**
+
 Julia just finished conducting a coding contest, and she needs your help assembling the leaderboard! Write a query to print the respective hacker_id and name of hackers who achieved full scores for more than one challenge. Order your output in descending order by the total number of challenges in which the hacker earned a full score. If more than one hacker received full scores in same number of challenges, then sort them by ascending hacker_id.
 
 Input Format
