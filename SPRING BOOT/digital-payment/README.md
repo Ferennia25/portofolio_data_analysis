@@ -8,7 +8,7 @@
   - Spring Data JPA
   - MySQL Driver
   - MySQL
-  - Maven\
+  - Maven
 
 ### Project Structure
 
@@ -44,9 +44,9 @@
   
 ### How to Run the Project
 1. Clone this repository
-2. Run ‘port java.sql’ in MySQL
+2. Run **‘port java.sql’** in MySQL
 3. Update database configuration in `application.properties`
-4. Run the project by running DigitalPaymentApplication directly on Intellij IDEA
+4. Run the project by running DigitalPaymentApplication directly on IntelliJ IDEA
 
 
 ### Future Improvements
