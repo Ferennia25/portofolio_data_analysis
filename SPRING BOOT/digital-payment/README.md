@@ -47,6 +47,7 @@
 2. Run **‘port java.sql’** in MySQL
 3. Update database configuration in `application.properties`
 4. Run the project by running DigitalPaymentApplication directly on IntelliJ IDEA
+5. Test API in POSTMAN
 
 
 ### Future Improvements
