@@ -33,7 +33,7 @@
   - POST payment/transfer
 
     example:
-    POST [http://localhost:8080/payment/deposit?acc=10001&amount=1000000]
+    POST [(http://localhost:8080/payment/deposit?acc=10001&amount=1000000)]
 
     Response: 
 	    Deposit success
