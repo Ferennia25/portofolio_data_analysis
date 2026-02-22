@@ -51,6 +51,7 @@
 
 ### Future Improvements
   - Add new bank account creation
+  - Add checking balance by calling bank account number and fullname
   - Add testing
   - Add exception handling in detail for each class
   - Add authentication
