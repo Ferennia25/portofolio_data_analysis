@@ -24,6 +24,7 @@
   - Deposit money
   - Withdraw money
   - Transfer money
+  - Adding new account
   - Record transaction history
 
 ### API Endpoints
@@ -51,7 +52,6 @@
 
 
 ### Future Improvements
-  - Add new bank account creation
   - Add checking balance by calling bank account number and fullname
   - Add testing
   - Add exception handling in detail for each class
