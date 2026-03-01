@@ -13,7 +13,8 @@ public class BankAccount {  // represent bank_accounts table
     private String fullname;
     private double balance;
 
-    // getters
+
+    // getter
     public int getAcc() {
         return account_number;
     }
@@ -24,8 +25,8 @@ public class BankAccount {  // represent bank_accounts table
         return balance;
     }
 
-    // setters
-    public void setBalance(double balance) {
-        this.balance = balance;
-    }
+    // setter
+    public void setAcc(int acc) {this.account_number=acc ;}
+    public void setFullname(String fullname) {this.fullname=fullname;}
+    public void setBalance(double balance) {this.balance = balance;}
 }
