@@ -38,5 +38,13 @@ public class PaymentController {
         service.transfer(from, to, amount);
         return "Transfer success";
     }
+    
+    @PostMapping("/add_account")
+    public String addAccount (@RequestParam int accNumber,
+                              @RequestParam String fullname,
+                              @RequestParam double balance) {
+        service.addAccount(accNumber, fullname, balance);
+        return "Adding new account success";
+    }
 }
 
