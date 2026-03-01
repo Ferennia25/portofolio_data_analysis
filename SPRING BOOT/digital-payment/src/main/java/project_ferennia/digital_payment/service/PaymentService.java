@@ -60,6 +60,14 @@ public class PaymentService {
         saveTransaction(receiver, "transfer", amount, "receiving money from " + sender);
     }
 
+    public void addAccount(int acc, String fullname, double balance) {
+        BankAccount newAcc = new BankAccount();
+        newAcc.setAcc(acc);
+        newAcc.setFullname(fullname);
+        newAcc.setBalance(balance);
+        accountRepo.save(newAcc);
+    }
+    
     // for transactions_record table
     private void saveTransaction(int acc, String type, double amount, String note) {
         TransactionRecord tx = new TransactionRecord();
